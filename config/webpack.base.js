@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path');
-const DIST_DIR = path.resolve(__dirname, "../dist");
+const DIST_DIR = path.resolve(__dirname, "../public");
 const SRC_DIR = path.resolve(__dirname, "src");
 const ASSETS_DIR = path.resolve(__dirname, "../assets");
 
@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: DIST_DIR,
         filename: 'bundle.js',
-        publicPath: '/'
+        publicPath: DIST_DIR
     },
     module: {
         rules: [
